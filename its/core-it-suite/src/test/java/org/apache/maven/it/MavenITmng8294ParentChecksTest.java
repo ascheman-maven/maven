@@ -29,10 +29,6 @@ import static org.junit.jupiter.api.Assertions.assertThrows;
  */
 class MavenITmng8294ParentChecksTest extends AbstractMavenIntegrationTestCase {
 
-    MavenITmng8294ParentChecksTest() {
-        super("[4.0.0-beta-5,)");
-    }
-
     /**
      *  Verify error when mismatch between GAV and relativePath
      */

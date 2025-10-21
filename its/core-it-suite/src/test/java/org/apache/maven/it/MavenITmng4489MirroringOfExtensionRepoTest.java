@@ -42,10 +42,6 @@ import org.junit.jupiter.api.Test;
  */
 public class MavenITmng4489MirroringOfExtensionRepoTest extends AbstractMavenIntegrationTestCase {
 
-    public MavenITmng4489MirroringOfExtensionRepoTest() {
-        super("[2.0.3,3.0-alpha-1),[3.0-alpha-6,)");
-    }
-
     /**
      * Test that repositories contributed by extension POMs during transitive dependency resolution are subject to
      * mirror and authentication configuration.

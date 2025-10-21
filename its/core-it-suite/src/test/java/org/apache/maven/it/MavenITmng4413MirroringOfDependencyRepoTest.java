@@ -42,10 +42,6 @@ import org.junit.jupiter.api.Test;
  */
 public class MavenITmng4413MirroringOfDependencyRepoTest extends AbstractMavenIntegrationTestCase {
 
-    public MavenITmng4413MirroringOfDependencyRepoTest() {
-        super(ALL_MAVEN_VERSIONS);
-    }
-
     /**
      * Test that repositories contributed by dependency POMs during transitive dependency resolution are subject to
      * mirror and authentication configuration.

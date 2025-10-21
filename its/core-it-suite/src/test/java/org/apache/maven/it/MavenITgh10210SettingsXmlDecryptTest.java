@@ -29,12 +29,9 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 
 /**
  * This is a test set for <a href="https://github.com/apache/maven/issues/10210">GH-10210</a>.
+ * @since 4.0.0-rc4
  */
 class MavenITgh10210SettingsXmlDecryptTest extends AbstractMavenIntegrationTestCase {
-
-    MavenITgh10210SettingsXmlDecryptTest() {
-        super("(4.0.0-rc4,)"); // fixed post 4.0.0-rc-4
-    }
 
     @Test
     void testItPass() throws Exception {

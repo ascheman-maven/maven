@@ -42,10 +42,6 @@ import org.junit.jupiter.api.Test;
  */
 public class MavenITmng4561MirroringOfPluginRepoTest extends AbstractMavenIntegrationTestCase {
 
-    public MavenITmng4561MirroringOfPluginRepoTest() {
-        super("[2.0.3,3.0-alpha-1),[3.0-alpha-7,)");
-    }
-
     /**
      * Test that repositories contributed by plugin POMs during transitive dependency resolution are subject to
      * mirror, proxy and authentication configuration.
