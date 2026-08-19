@@ -33,6 +33,10 @@ import org.junit.jupiter.api.Test;
  */
 class MavenITgh12770UnversionedPluginPrereleaseTest extends AbstractMavenIntegrationTestCase {
 
+    MavenITgh12770UnversionedPluginPrereleaseTest() {
+        super("[4.0.0,)");
+    }
+
     @Test
     void stableVersionIsPreferredOverPreRelease() throws Exception {
         // File on maven-4.0.x, Path on master -- `var` keeps this source portable across both lines.
