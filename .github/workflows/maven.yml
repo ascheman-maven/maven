@@ -19,7 +19,7 @@ name: Java CI
 
 on:
   push:
-    branches: [ maven-4.0.x ]
+    branches: [ maven-4.0.x, 'ci/**' ]
   pull_request:
     branches: [ maven-4.0.x ]
 
