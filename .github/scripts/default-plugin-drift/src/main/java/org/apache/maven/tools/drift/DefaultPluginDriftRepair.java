@@ -40,9 +40,9 @@ import java.util.stream.Stream;
  * The three maintained lines store those versions in three different ways, so the rewrite matches all
  * of them by shape rather than by file:
  * <ul>
- *   <li>{@code org.apache.maven.plugins:maven-jar-plugin:3.5.0} — the XML default bindings (3.9.x);</li>
- *   <li>{@code <version.maven-jar-plugin>3.5.0</version.maven-jar-plugin>} — a POM property (3.10.x);</li>
- *   <li>{@code JAR_PLUGIN_VERSION = "3.4.2"} — a Java constant (4.x), with or without a MAVEN_ prefix.</li>
+ *   <li>{@code org.apache.maven.plugins:maven-jar-plugin:3.5.1 — the XML default bindings (3.9.x);</li>
+ *   <li>{@code <version.maven-jar-plugin>3.5.1</version.maven-jar-plugin>} — a POM property (3.10.x);</li>
+ *   <li>{@code JAR_PLUGIN_VERSION = "3.5.1"} — a Java constant (4.x), with or without a MAVEN_ prefix.</li>
  * </ul>
  * A plugin the report names but whose version cannot be found is reported as unmatched and makes the
  * run fail: a repair that silently skips a plugin is worse than no repair.
@@ -161,11 +161,11 @@ public final class DefaultPluginDriftRepair {
                 + "_PLUGIN_VERSION";
         List<Pattern> patterns = List.of(
                 // XML default bindings, fully qualified so unrelated coordinates are not touched:
-                // org.apache.maven.plugins:maven-jar-plugin:3.5.0
+                // org.apache.maven.plugins:maven-jar-plugin:3.5.1
                 Pattern.compile("(org\\.apache\\.maven\\.plugins:" + Pattern.quote(artifactId) + ":)([0-9][^:<\\s]*)"),
-                // POM property: <version.maven-jar-plugin>3.5.0</version.maven-jar-plugin>
+                // POM property: <version.maven-jar-plugin>3.5.1</version.maven-jar-plugin>
                 Pattern.compile("(<version\\." + Pattern.quote(artifactId) + ">)([^<]+)"),
-                // Java constant: [MAVEN_]JAR_PLUGIN_VERSION = "3.4.2"
+                // Java constant: [MAVEN_]JAR_PLUGIN_VERSION = "3.5.1"
                 Pattern.compile("((?:MAVEN_)?" + Pattern.quote(constant) + "\\s*=\\s*\")([^\"]+)"));
 
         String result = content;
