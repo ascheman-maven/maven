@@ -68,7 +68,13 @@ jobs:
         id: dist
         run: |
           unzip -q apache-maven/target/apache-maven-bin.zip -d "${RUNNER_TEMP}/dist"
-          echo "home=$(ls -d "${RUNNER_TEMP}"/dist/apache-maven-*)" >> "${GITHUB_OUTPUT}"
+          # versionlessMavenDist unpacks to apache-maven/, a versioned build to apache-maven-<v>/
+          home=$(ls -d "${RUNNER_TEMP}"/dist/apache-maven*/ | head -1)
+          home="${home%/}"
+          [ -x "${home}/bin/mvn" ] || { echo "no distribution unpacked under ${RUNNER_TEMP}/dist"; exit 1; }
+          echo "home=${home}" >> "${GITHUB_OUTPUT}"
+          # artifact names may not contain a slash
+          echo "slug=${GITHUB_REF_NAME//\//-}" >> "${GITHUB_OUTPUT}"
 
       - name: Report the drift
         id: report
@@ -110,7 +116,7 @@ jobs:
       - uses: actions/upload-artifact@v4
         if: always()
         with:
-          name: drift-${{ matrix.branch }}
+          name: drift-${{ steps.dist.outputs.slug }}
           path: |
             latest.properties
             changes.txt
