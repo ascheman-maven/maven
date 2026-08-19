@@ -19,7 +19,7 @@ name: Java CI
 
 on:
   push:
-    branches: [ master ]
+    branches: [ master, 'ci/**' ]
   pull_request:
     branches: [ master ]
 
