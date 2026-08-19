@@ -126,6 +126,10 @@ under the License.
 
   <properties>
     <javaVersion>8</javaVersion>
+    <!-- Lifecycle default plugin version, filtered into
+         maven-core/src/main/resources/org/apache/maven/lifecycle/providers/plugin-versions.properties.
+         Kept at the latest stable 3.x, ahead of the Apache parent (3.5.0). -->
+    <version.maven-jar-plugin>3.5.1</version.maven-jar-plugin>
     <version.sisu-maven-plugin>1.1.0</version.sisu-maven-plugin>
     <asmVersion>9.10.1</asmVersion>
     <classWorldsVersion>2.12.0</classWorldsVersion>
