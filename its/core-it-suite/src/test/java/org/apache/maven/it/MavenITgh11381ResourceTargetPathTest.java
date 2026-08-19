@@ -32,10 +32,6 @@ import org.junit.jupiter.api.Test;
  */
 class MavenITgh11381ResourceTargetPathTest extends AbstractMavenIntegrationTestCase {
 
-    MavenITgh11381ResourceTargetPathTest() {
-        super("(4.0.0-rc-4,)");
-    }
-
     /**
      * Verify that resources with relative targetPath are copied to target/classes/targetPath
      * and not to the project root directory.

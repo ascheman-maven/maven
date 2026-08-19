@@ -35,10 +35,6 @@ import org.junit.jupiter.api.Test;
  */
 public class MavenITgh11314PluginInjectionTest extends AbstractMavenIntegrationTestCase {
 
-    MavenITgh11314PluginInjectionTest() {
-        super("(3.0,)");
-    }
-
     /**
      * Verify that V3 Mojos can be injected with v3 ToolchainFactory which is bridged from
      * the v4 ToolchainFactory implementation. This test reproduces the issue where a plugin

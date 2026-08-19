@@ -32,10 +32,6 @@ import org.junit.jupiter.api.Test;
  */
 class MavenITgh12303CIFriendlyRevisionRemoteResourcesTest extends AbstractMavenIntegrationTestCase {
 
-    MavenITgh12303CIFriendlyRevisionRemoteResourcesTest() {
-        super("[4.0.0-rc-3,)");
-    }
-
     @Test
     void testCiFriendlyRevisionWithRemoteResources() throws Exception {
         File testDir = extractResources("/gh-12303-ci-friendly-revision-remote-resources");

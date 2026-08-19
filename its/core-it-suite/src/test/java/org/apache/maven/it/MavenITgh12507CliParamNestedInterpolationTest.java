@@ -35,10 +35,6 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
  */
 class MavenITgh12507CliParamNestedInterpolationTest extends AbstractMavenIntegrationTestCase {
 
-    MavenITgh12507CliParamNestedInterpolationTest() {
-        super("[4.0.0-rc-6,)");
-    }
-
     /**
      * Verify that a system-property expression inside a CLI-supplied parameter value is resolved.
      */

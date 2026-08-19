@@ -37,10 +37,6 @@ import org.junit.jupiter.api.Test;
  */
 public class MavenITgh12305InvalidCollectRequestUninterpolatedManagedDepsTest extends AbstractMavenIntegrationTestCase {
 
-    MavenITgh12305InvalidCollectRequestUninterpolatedManagedDepsTest() {
-        super("[4.0.0-rc-3,)");
-    }
-
     @Test
     public void testUninterpolatedManagedDepsFromImportedBom() throws Exception {
         File testDir = extractResources("/gh-12305-invalid-collect-request");

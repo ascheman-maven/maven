@@ -43,10 +43,6 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
  */
 class MavenITgh11772ConsumerPom410Test extends AbstractMavenIntegrationTestCase {
 
-    MavenITgh11772ConsumerPom410Test() {
-        super("[4.0.0-rc-1,)");
-    }
-
     private static final String GROUP_ID = "org.apache.maven.its.gh11772";
 
     @Test

@@ -34,10 +34,6 @@ import org.junit.jupiter.api.Test;
  */
 public class MavenITgh11399FlattenPluginParentCycleTest extends AbstractMavenIntegrationTestCase {
 
-    public MavenITgh11399FlattenPluginParentCycleTest() {
-        super("(4.0.0-rc-3,)");
-    }
-
     /**
      * Verify that flatten-maven-plugin with updatePomFile=true and parent expansion
      * does not cause a false parent cycle detection error during install.

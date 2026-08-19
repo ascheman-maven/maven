@@ -31,10 +31,6 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
  */
 class MavenITgh11363PipeSymbolsInJvmConfigTest extends AbstractMavenIntegrationTestCase {
 
-    MavenITgh11363PipeSymbolsInJvmConfigTest() {
-        super("[4.0.0,)");
-    }
-
     /**
      * Verify that pipe symbols in .mvn/jvm.config are properly handled
      */

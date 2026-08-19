@@ -32,10 +32,6 @@ import org.junit.jupiter.api.Test;
  */
 class MavenITgh11798ConsumerPomProfileActivationTest extends AbstractMavenIntegrationTestCase {
 
-    MavenITgh11798ConsumerPomProfileActivationTest() {
-        super("[4.0.0-rc-1,)");
-    }
-
     @Test
     void testConsumerPomResolvesParentProfileProperties() throws Exception {
         Path basedir = extractResources("/gh-11798-consumer-pom-profile-activation").toPath();

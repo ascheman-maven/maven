@@ -47,10 +47,6 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
  */
 public class MavenITgh11346DependencyManagementOverrideTest extends AbstractMavenIntegrationTestCase {
 
-    MavenITgh11346DependencyManagementOverrideTest() {
-        super("[4.0.0,)");
-    }
-
     /**
      * Verify that when consumer POM flattening is disabled, dependency management
      * from intermediate dependencies applies to the consumer's transitive dependencies.

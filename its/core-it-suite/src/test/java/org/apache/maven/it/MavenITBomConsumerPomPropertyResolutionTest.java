@@ -48,10 +48,6 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
  */
 class MavenITBomConsumerPomPropertyResolutionTest extends AbstractMavenIntegrationTestCase {
 
-    MavenITBomConsumerPomPropertyResolutionTest() {
-        super("[4.0.0-rc-4,)");
-    }
-
     /**
      * Verify that the BOM consumer POM (default, no flatten) resolves
      * property-referenced versions in dependencyManagement.

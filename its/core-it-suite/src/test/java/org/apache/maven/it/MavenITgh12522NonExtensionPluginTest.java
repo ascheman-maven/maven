@@ -49,10 +49,6 @@ import org.junit.jupiter.api.condition.JRE;
  */
 class MavenITgh12522NonExtensionPluginTest extends AbstractMavenIntegrationTestCase {
 
-    MavenITgh12522NonExtensionPluginTest() {
-        super("[4.0.0-alpha-1,)");
-    }
-
     /**
      * Verify that a build using a plugin with JSR330 components (tycho-bnd-plugin)
      * that is NOT marked as an extension completes successfully. With Sisu 1.1.0's

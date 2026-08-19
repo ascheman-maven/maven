@@ -31,10 +31,6 @@ import org.junit.jupiter.api.Test;
  */
 class MavenITmng11796DefaultPhasesStandardLifecycleTest extends AbstractMavenIntegrationTestCase {
 
-    MavenITmng11796DefaultPhasesStandardLifecycleTest() {
-        super("[4.0.0-rc-1,)");
-    }
-
     /**
      * Verify that a plugin extension with {@code <default-phases>} mapping a goal
      * to the standard {@code process-sources} phase causes that goal to execute

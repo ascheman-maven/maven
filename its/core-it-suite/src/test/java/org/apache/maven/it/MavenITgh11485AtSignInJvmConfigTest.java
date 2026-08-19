@@ -32,10 +32,6 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
  */
 class MavenITgh11485AtSignInJvmConfigTest extends AbstractMavenIntegrationTestCase {
 
-    MavenITgh11485AtSignInJvmConfigTest() {
-        super("[4.0.0,)");
-    }
-
     @Test
     void testAtSignInJvmConfig() throws Exception {
         File testDir = extractResources("/gh-11485-at-sign");

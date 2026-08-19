@@ -29,10 +29,6 @@ import org.junit.jupiter.api.Test;
  */
 public class MavenITgh12301StackOverflowInternalParentRevisionTest extends AbstractMavenIntegrationTestCase {
 
-    public MavenITgh12301StackOverflowInternalParentRevisionTest() {
-        super("[4.0.0-rc-6,)");
-    }
-
     @Test
     public void testNoStackOverflowWithInternalParentAndRevision() throws Exception {
         File testDir = extractResources("/gh-12301-stackoverflow-internal-parent");

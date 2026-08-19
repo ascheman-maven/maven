@@ -37,10 +37,6 @@ import org.junit.jupiter.api.Test;
  */
 class MavenITmng12534AfterAnnotationTest extends AbstractMavenIntegrationTestCase {
 
-    MavenITmng12534AfterAnnotationTest() {
-        super("[4.0.0-rc-6,)");
-    }
-
     /**
      * Verify that a plugin with {@code afterLinks} in its V2 descriptor
      * is correctly loaded and the mojo executes under the concurrent builder.

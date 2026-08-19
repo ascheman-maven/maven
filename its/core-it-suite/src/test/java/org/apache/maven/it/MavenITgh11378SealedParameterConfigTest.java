@@ -27,10 +27,6 @@ import org.junit.jupiter.api.Test;
  */
 public class MavenITgh11378SealedParameterConfigTest extends AbstractMavenIntegrationTestCase {
 
-    MavenITgh11378SealedParameterConfigTest() {
-        super("[4.0.0-rc-1,)");
-    }
-
     @Test
     public void testSealedParameterImplementationCanUseSimpleName() throws Exception {
         File testDir = extractResources("/gh-11378-sealed-parameter-config");
